@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/bootstrap.min-4.4.1.css">
+    <script src="../src/js/bootstrap.min-4.4.1.js"></script>
+    <script src="../src/js/jquery.min-2.1.1.js"></script>
+
+
+</head>
+
+<body class="container text-center">
+    <div class="jumbotron">
+        <button class="btn btn-secondary" style="opacity: 0.2">press me</button>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("button").on({
+                mouseenter: function () {
+                    $(this).animate({
+                        opacity: '1',
+                        width: '+=50px',
+                        fontSize: '+=.3em'
+                    }, "slow");
+                },
+                mouseleave: function () {
+                    $(this).animate({
+                        opacity: '0.2',
+                        width: '-=50px',
+                        fontSize: '-=.3em'
+                    }, "slow");
+                }
+            });
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>

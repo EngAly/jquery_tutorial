@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/bootstrap.min-4.4.1.css">
+    <script src="../src/js/bootstrap.min-4.4.1.js"></script>
+    <script src="../src/js/jquery.min-2.1.1.js"></script>
+</head>
+
+<body>
+
+    <div class="jumbotron">
+        <div class="well">
+            <h1>click to hide me</h1>
+        </div>
+        <div class="btn-group btn-group-lg">
+            <button type="button" class="btn btn-danger">hide</button>
+            <button type="button" class="btn btn-primary">toggle</button>
+            <button type="button" class="btn btn-success">show</button>
+        </div>
+    </div>
+     <script>
+        $(document).ready(function () {
+            $(".btn-danger").click(function () {
+                $("h1").hide();
+            })
+            $(".btn-success").click(function () {
+                $("h1").show();
+            })
+            // With jQuery, you can toggle between the hide() and show() methods with the toggle() method.
+            // Shown elements are hidden and hidden elements are shown:
+            $(".btn-primary").click(function () {
+                $("h1").toggle();
+            })
+        });
+    </script>
+</body>
+
+</html>

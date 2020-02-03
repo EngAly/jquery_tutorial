@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/bootstrap.min-4.4.1.css">
+    <script src="../src/js/bootstrap.min-4.4.1.js"></script>
+    <script src="../src/js/jquery.min-2.1.1.js"></script>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="jumbotron">
+            <p>Click on the button to load name.txt file:</p>
+            <h1 id="filecontent"></h1>
+            <input class="btn btn-primary btn-lg" type="button" id="driver" value="Load Data" />
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+        // The first parameter of $.post() is the URL we wish to request ("handleData.php").
+        // Then we pass in some data to send along with the request (name and age).
+        // The ASP script in "handleData.php" reads the parameters, processes them,
+        //  and returns a result.
+        // The third parameter is a callback function. The first callback parameter 
+        // holds the content of the page requested, and the second callback parameter holds the
+        //  status of the request.
+
+        $(document).ready(function () {
+
+            // get data from file
+            $("#driver").click(function (event) {
+                $.post("../src/res/handleData.php",
+                    {
+                        name: "ali ahmed",
+                        age: 25
+                    },
+                    function (response, status) {
+                        if (status == "success") {
+                            $("#filecontent").html(response);
+                        }
+                        // alert("Data: " + data + "\nStatus: " + status);
+                    });
+            });
+
+        });
+    </script>
+</body>
+
+
+</html>

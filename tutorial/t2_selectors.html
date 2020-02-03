@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../src/js/jquery.min-2.1.1.js"></script>
+</head>
+
+<body>
+    <p>paragraph 1</p>
+    <p>paragraph 2</p>
+    <p>paragraph 3</p>
+    <p>paragraph 4</p>
+    <p>paragraph 5</p>
+
+
+    <button>hide all paragraph</button>
+    <script>
+        //         jQuery Selectors
+        // jQuery selectors allow you to select and manipulate HTML element(s).
+        // jQuery selectors are used to "find" (or select) HTML elements based on their id, classes, types, attributes, values of attributes and much more. It's based on the existing CSS Selectors, and in addition, it has some own custom selectors.
+        // All selectors in jQuery start with the dollar sign and parentheses: $().
+        // note that if You can select all <p> elements on a page like this:  $("p")
+
+        // in this tutorial will select all elements with <p> tag
+        // note that to selecta all tags $("*")
+        // $("p.classname") 	Selects all <p> elements with class="classname"
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").hide();
+            });
+        });
+
+
+
+    </script>
+</body>
+
+</html>

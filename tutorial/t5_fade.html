@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/bootstrap.min-4.4.1.css">
+    <script src="../src/js/bootstrap.min-4.4.1.js"></script>
+    <script src="../src/js/jquery.min-2.1.1.js"></script>
+</head>
+
+
+<body class="container">
+    <div class="jumbotron">
+        <div class="card " style="width: 18rem;">
+            <img class="card-img-top" src="../src/img/bg.jpeg">
+            <div class="card-body">
+                <h5 class="card-title">kfdjfdhsfhuds</h5>
+                <p class="card-text">kfdjfdhsfhuds</p>
+                <button class="btn btn-danger">fadeIn</button>
+                <button class="btn btn-primary">fadeOut</button>
+                <button class="btn btn-secondary">toggle</button>
+                <button class="btn btn-warning">fade to</button>
+            </div>
+        </div>
+    </div>
+    <div id="div1" style="width:80px;height:80px;background-color:red;">
+    </div>
+
+    <script>
+        // The jQuery fadeOut() method is used to fade out a visible element.
+        $(document).ready(function () {
+            $(".btn-primary").click(function () {
+                $("#div1").fadeOut();
+            })
+            $(".btn-danger").click(function () {
+                $("#div1").fadeIn();
+            })
+            $(".btn-secondary").click(function () {
+                $("#div1").fadeToggle();
+            })
+            // The jQuery fadeTo() method allows fading to a given opacity (value between 0 and 1).
+            $(".btn-warning").click(function () {
+                $("#div1").fadeTo("slow", 0.50);
+            })
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>

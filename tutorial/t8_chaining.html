@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/bootstrap.min-4.4.1.css">
+    <script src="../src/js/bootstrap.min-4.4.1.js"></script>
+    <script src="../src/js/jquery.min-2.1.1.js"></script>
+
+
+</head>
+
+<body class="container text-center">
+    <div class="row mt-2">
+        <button class="btn btn-secondary col-md-2   offset-md-5">start event chaining</button>
+    </div>
+    <div class="row">
+        <div class="text-center offset-md-4" style="width: 30rem;">
+            <div class="mt-3">
+                <div id="flip" class="text-primary" style="background-color: #ced8b1">Click to slide down panel</div>
+                <div id="panel" style="padding: 50px;background-color: #e5eecc; display: none;">Hello world!</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // note that in jquery chain you can execute multi event sequence
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#panel").slideDown(5000).slideUp(5000);
+            });
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>

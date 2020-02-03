@@ -1,0 +1,27 @@
+[
+    {
+        "fname": "aly ahmed",
+        "email": "aly ahmed@yahoo.com",
+        "phone": "123456790"
+    },
+    {
+        "fname": "hossam omarra",
+        "email": "hossam omarra@gmail",
+        "phone": "234567890"
+    },
+    {
+        "fname": "amira badouin",
+        "email": "amira badouin@linked.In",
+        "phone": "23456789"
+    },
+    {
+        "fname": "doaa ali",
+        "email": "doaa ali@linked.In",
+        "phone": "23456789"
+    },
+    {
+        "fname": "heba ibrahim",
+        "email": "heba ibrahim@linked.In",
+        "phone": "23456789"
+    }
+]

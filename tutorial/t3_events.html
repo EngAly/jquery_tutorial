@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../src/js/jquery.min-2.1.1.js"></script>
+</head>
+
+<body>
+    <!-- 1 -->
+    <div id="div1"></div>
+    <button id="btn1">click event</button>
+
+    <!-- 2 -->
+    <div id="div2"></div>
+    <button id="btn2">double click event</button>
+
+    <!-- 3 -->
+    <div id="div3"></div>
+    <button id="btn3">mouseenter event</button>
+
+    <!-- 4 -->
+    <div id="div4"></div>
+    <button id="btn4">mouseleave event</button>
+
+    <!-- 5 -->
+    <div id="div5"></div>
+    <button id="btn5">mousedown event</button>
+
+    <!-- 6 -->
+    <div id="div6"></div>
+    <button id="btn6">mouseup event</button>
+
+    <!-- 7 -->
+    <div id="div7"></div>
+    <button id="btn7">hover event</button>
+
+    <div class="row ">
+        <div class="col">
+            <hr>
+        </div>
+        <div class="col-auto">
+            <center> work with inputs</center>
+        </div>
+        <div class="col">
+            <hr>
+        </div>
+    </div>
+    <input type="text">
+
+    <script>
+        // The $(document).ready() method allows us to execute a function when the document is fully loaded.
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#div1").text("button1 is clicked");
+            });
+            $("#btn2").dblclick(function () {
+                $("#div2").text("button2 is double clicked");
+            });
+            $("#btn3").mouseenter(function () {
+                $("#div3").text("button3 is mouseenter event");
+            });
+            $("#btn4").mouseleave(function () {
+                $("#div4").text("button4 is mouseleave event");
+            });
+
+            // The mousedown() method attaches an event handler function to an HTML element.
+            // The function is executed, when the left, middle or right mouse button is pressed down, while the mouse is over the HTML element:
+            $("#btn5").mousedown(function () {
+                $("#div5").text("button5 is mousedown event");
+            });
+            // The mouseup() method attaches an event handler function to an HTML element.
+            // The function is executed, when the left, middle or right mouse button is released, while the mouse is over the HTML element:
+            $("#btn6").mouseup(function () {
+                $("#div6").text("button6 is mouseup event");
+            });
+
+            // The hover() method takes two functions and is a combination of the mouseenter() and mouseleave() methods.
+            // The first function is executed when the mouse enters the HTML element, and the second function is executed when the mouse leaves the HTML element:
+            $("#btn7").hover(function () {
+                $("#div7").text("button7 is hover event");
+            });
+            // The focus() method attaches an event handler function to an HTML form field.
+            // The function is executed when the form field gets focus:
+            $("input").focus(function () {
+                $(this).css("background-color", "red");
+            });
+            // The blur() method attaches an event handler function to an HTML form field.
+            // The function is executed when the form field loses focus:
+            $("input").blur(function () {
+                $(this).css("background-color", "white");
+            });
+        });
+    </script>
+</body>
+
+</html>

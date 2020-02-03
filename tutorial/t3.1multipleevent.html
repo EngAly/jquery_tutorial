@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/bootstrap.min-4.4.1.css">
+    <script src="../src/js/bootstrap.min-4.4.1.js"></script>
+    <script src="../src/js/jquery.min-2.1.1.js"></script>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <p>multi event</p>
+        <button type="button" class="btn btn-primary">Primary <span id="inc" class="badge">0</span></button>
+    </div>
+    <script>
+        var counter = 0;
+        // The on() method attaches one or more event handlers for the selected elements.
+        // Attach a click event to a < p > element
+        $("p").on("click", function () {
+            $(this).hide();
+        });
+        // Attach multiple event handlers to a <p> element:
+        $("button").on({
+            click: function () {
+                $("#inc").text(++counter);
+            },
+            mouseleave:function(){
+                $("#inc").text(--counter);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

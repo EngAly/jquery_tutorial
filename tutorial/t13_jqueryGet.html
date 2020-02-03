@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/bootstrap.min-4.4.1.css">
+    <script src="../src/js/bootstrap.min-4.4.1.js"></script>
+    <script src="../src/js/jquery.min-2.1.1.js"></script>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="jumbotron">
+            <p>Click on the button to load name.txt file:</p>
+            <h1 id="filecontent"></h1>
+            <input class="btn btn-primary btn-lg" type="button" id="driver" value="Load Data" />
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+        // What is AJAX ?
+        //     AJAX = Asynchronous JavaScript and XML.
+        // In short; AJAX is about loading data in the background and display it on the webpage, without reloading the whole page.
+        // Examples of applications using AJAX: Gmail, Google Maps, Youtube, and Facebook tabs.
+        // You can learn more about AJAX in our AJAX tutorial.
+        // With the jQuery AJAX methods, you can request text, HTML, XML, or JSON 
+        // from a remote server using both HTTP Get and HTTP Post - And you can load the external data directly into the selected HTML elements of your web page!
+        // Without jQuery, AJAX coding can be a bit tricky!
+
+
+        $(document).ready(function () {
+
+            // get data from file
+            $("#driver").click(function (event) {
+                $.get("../src/res/name.txt", function (data, status) {
+                    $("#filecontent").text("file content " + data);
+                    // alert("Data: " + data + "\nStatus: " + status);
+                });
+            });
+
+        });
+    </script>
+</body>
+
+
+</html>

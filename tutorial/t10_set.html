@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/bootstrap.min-4.4.1.css">
+    <script src="../src/js/bootstrap.min-4.4.1.js"></script>
+    <script src="../src/js/jquery.min-2.1.1.js"></script>
+
+
+</head>
+
+<body class="container text-center">
+    <p id="test1">This is a paragraph.</p>
+    <p id="test2">This is another paragraph.</p>
+    <p>Input field: <input type="text" id="test3" value="Mickey Mouse"></p>
+
+    <!--  buttons to test all set methods -->
+    <button id="btn1">Set Text</button>
+    <button id="btn2">Set HTML</button>
+    <button id="btn3">Set Value</button>
+    <hr>
+    <!-- explain callback function -->
+    <p>Callback function for text, html methods that take two argement</p>
+    <button id="btn4">Callback Function</button>
+    <p id="feedback">old text</p>
+    <hr>
+    <!-- change the value for specific attribut -->
+    <p>change the href link in a tag</p>
+    <button id="btn5">change link Value</button><br>
+    <a id="href" name="ali ahmed" href="www.google.com">google</a>
+    <hr>
+    <!-- A Callback Function for attr() -->
+    <button id="btn6">callback for attr</button>
+    <br>
+    <a id="testcallback" href="www.google.com">google</a>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#test1").text("Hello world!");
+            });
+            $("#btn2").click(function () {
+                $("#test2").html("<b>Hello world!</b>");
+            });
+            $("#btn3").click(function () {
+                $("#test3").val("Dolly Duck");
+            });
+
+
+            // here will execute callback function and return the result to text(callback function result)
+            $("#btn4").click(function () {
+                $("#feedback").text(function (index, oldtext) {
+                    return "old text: " + oldtext + " and its index: " + index;
+                });
+            });
+
+            // note that you can write multi attributes in attr as array
+            $("#btn5").click(function () {
+                $("#href").text("facebook");
+                // this single attribute
+                // $("#href").attr("href", "www.facebook.com");
+                // this multi attribute
+                $("#href").attr({
+                    "href": "www.facebook.com",
+                    "name": "aly ahmed mohamed"
+                });
+            });
+            $("#btn6").click(function () {
+                $("#testcallback").attr("href", function (index, oldvalue) {
+                    return oldvalue + "/Api";
+                });
+            });
+        });
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

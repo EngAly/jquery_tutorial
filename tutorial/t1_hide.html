@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../src/js/jquery.min-2.1.1.js"></script>
+</head>
+
+<body>
+
+    <h1>click to hide me</h1>
+    <h1>another to hide</h1>
+    <h1>i also maybe hide</h1>
+    <button>hide all h1 tags</button>
+
+    <div id="test" style="font-size: 30px">click to hide me with my id</div>
+    <script>
+        //jQuery is a JavaScript Library.
+        // jQuery greatly simplifies JavaScript programming.
+        // jQuery is easy to learn.
+
+        // You might have noticed that all jQuery methods  in our examples, are inside a document ready event
+        // You might have noticed that all jQuery methods in our examples, are inside a document ready event
+        $(document).ready(function () {
+            $("h1").click(function () {
+                $(this).hide();
+            })
+
+            $("button").click(function () {
+                $("h1").hide();
+            });
+
+            $("#test").click(function () {
+                $(this).hide();
+            });
+        });
+    </script>
+</body>
+
+</html>

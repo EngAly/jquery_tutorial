@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/bootstrap.min-4.4.1.css">
+    <script src="../src/js/bootstrap.min-4.4.1.js"></script>
+    <script src="../src/js/jquery.min-2.1.1.js"></script>
+
+
+</head>
+
+<body class="container text-center">
+    <div class="div1">
+        <p class="test1"> id test1</p>
+        <p id="test2"> id test2</p>
+    </div>
+    <button id="rem">remove p tag and its childs</button>
+    <button id="empty">empty its childs</button>
+    <button id="remid">will remove id test1</button>
+    <script>
+        // Remove Elements / Content
+        // To remove elements and content, there are mainly two jQuery methods:
+        // remove() - Removes the selected element(and its child elements)
+        // empty() - Removes the child elements from the selected element
+
+        $(document).ready(function () {
+            $("#rem").click(function () {
+                $(".div1").remove();
+            });
+            $("#empty").click(function () {
+                $(".div1").remove();
+            });
+
+            // Filter the Elements to be Removed
+            $("#remid").click(function () {
+                $("p").remove(".test1");
+            });
+
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>

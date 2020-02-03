@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/bootstrap.min-4.4.1.css">
+    <script src="../src/js/bootstrap.min-4.4.1.js"></script>
+    <script src="../src/js/jquery.min-2.1.1.js"></script>
+
+
+</head>
+
+<body class="container">
+    <!-- tutorial for append and prepend and multiappend -->
+    <h3>tutorial for append and prepend and multiappend</h3>
+    <ol>
+        <li>List item 6</li>
+        <li>List item 7</li>
+    </ol>
+    <button id="btn1">Append list items</button>
+    <button id="btn2">prepend list items</button>
+    <!-- append multi elements -->
+    <button id="btn3">append elements</button>
+    <p id="elements"></p>
+    <hr>
+    <!-- tutorial for append after and before -->
+    <h3>tutorial for append after and before</h3>
+    <h4 class="flag">xxxxxxx</h4>
+    <br>
+    <button id="aft">append after</button>
+    <button id="bef">append before</button>
+    <button id="multiafter">append multi element after</button>
+
+
+    <script>
+        var inc = 7;
+        var dec = 6;
+        // this part for append and prepend and multi append
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("ol").append(" <li>List item " + (++inc) + "</li>");
+            });
+            $("#btn2").click(function () {
+                $("ol").prepend(" <li>List item " + (--dec) + "</li>");
+            });
+            $("#btn3").click(function () {
+                appendMultiArgs();
+            });
+            // this part for append after and append before
+            $("#aft").click(function () {
+                $(".flag").before("<b>Before</b>");
+            });
+            $("#bef").click(function () {
+                $(".flag").after("<b>after</b>");
+            });
+            $("#multiafter").click(function () {
+                afterText();
+            });
+
+
+        });
+
+
+        function appendMultiArgs() {
+            var txt1 = "<p>Text.</p>";               // Create element with HTML 
+            var txt2 = $("<p></p>").text("Text.");   // Create with jQuery
+            var txt3 = document.createElement("p");  // Create with DOM
+            txt3.innerHTML = "Text.";
+            $("#elements").append(txt1, txt2, txt3);         // Append the new elements
+        }
+
+        function afterText() {
+            var txt1 = "<b>I </b>";                   // Create element with HTML
+            var txt2 = $("<i></i>").text("love ");    // Create with jQuery
+            var txt3 = document.createElement("b");   // Create with DOM
+            txt3.innerHTML = "jQuery!<br>";
+            $(".flag").after(txt1, txt2, txt3);      // Insert new elements after img
+        }
+    </script>
+</body>
+
+</html>
