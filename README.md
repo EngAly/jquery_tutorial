@@ -32,3 +32,5 @@ for every one want to be advanced in JavaScript with less write and ease use.
 * w3schools: https://www.w3schools.com/jquery/default.asp   
 * stack overflow: https://stackoverflow.com/questions/tagged/jquery   
   => (this site is very recomended for problems solving)
+ * advanced tutorialsfor datatable: https://mdbootstrap.com/docs/jquery/tables/basic/ 
+ * another advanced tutorials: https://datatables.net/examples/styling/bootstrap4
